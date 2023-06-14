@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import * as S from "./style";
+import * as C from "../../components";
 
 const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ const MainPage = () => {
               <S.ColorSurveyBtnText>+ 새 컬러 등록하기</S.ColorSurveyBtnText>
             </S.ColorSurveyBtn>
           </Link>
+          <C.SurveyList></C.SurveyList>
         </S.MainContent>
       </S.MainContainer>
     </>
