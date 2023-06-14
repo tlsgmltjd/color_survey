@@ -28,6 +28,8 @@ function SurveyList() {
     setOffset(offset + LIMIT);
   };
 
+  // 페이지네이션 마무리하기
+
   return (
     <S.SurveyList>
       {data.map((item) => (
