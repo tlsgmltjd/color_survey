@@ -31,6 +31,10 @@ const SelectPage = () => {
     setMbti(updatedMbti);
   };
 
+  // SelectHeader
+  // SelectMbtiBox
+  // SelectColor
+
   return (
     <S.SelectContainer>
       <C.SelectHeader />

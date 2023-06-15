@@ -11,6 +11,8 @@ export const SurveyList = styled.li`
 
   transition: all 0.1s;
 
+  cursor: pointer;
+
   &:hover {
     background: #f5f7fb;
     transition: all 0.1s;

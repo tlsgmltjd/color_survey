@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const MainContainer = styled.div`
   width: 100%;
-  max-width: 865px;
+  max-width: 965px;
   display: flex;
   gap: 50px;
 
@@ -12,15 +12,14 @@ export const MainContainer = styled.div`
 `;
 
 export const MainHeader = styled.header`
-  width: 300px;
+  width: 400px;
   height: 300px;
   background: #f5f7fb;
   border-radius: 50px;
   font-weight: 300;
-  text-align: right;
   display: flex;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   flex-direction: column;
   font-size: 40px;
   color: #464e5e;
