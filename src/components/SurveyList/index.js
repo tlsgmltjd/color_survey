@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { getData } from "../../Request/Request";
 import * as S from "./style";
+import * as C from "../../components";
 
 function SurveyList() {
   const [dataCount, setDataCount] = useState(0);
-  const [data, setDate] = useState([]);
+  const [data, setData] = useState([]);
   const [offset, setOffset] = useState(0);
   const [hasNext, setHasNext] = useState(true);
 
@@ -14,9 +15,10 @@ function SurveyList() {
     const currentData = await getData(offset, LIMIT);
     setDataCount(currentData.data.count);
 
-    if (offset === 0) setDate(currentData.data.results);
-    else setDate((prevItems) => [...prevItems, ...currentData.data.results]);
+    if (offset === 0) setData(currentData.data.results);
+    else setData((prevItems) => [...prevItems, ...currentData.data.results]);
 
+    setHasNext(currentData.data.count > offset + LIMIT);
     console.log(currentData.data);
   }
 
@@ -28,20 +30,19 @@ function SurveyList() {
     setOffset(offset + LIMIT);
   };
 
-  // 페이지네이션 마무리하기
-
   return (
-    <S.SurveyList>
+    <S.SurveyListContainer>
       {data.map((item) => (
-        <li key={item.id}>{item.mbti}</li>
+        <C.SurveyItem key={item.id} item={item}></C.SurveyItem>
       ))}
       <S.MoreBtn
-        disabled={dataCount < offset + LIMIT}
+        hasnext={hasNext}
+        disabled={!hasNext}
         onClick={handleMoreDataClick}
       >
-        더보기
+        {hasNext ? "더보기" : "더 없어요 ㅠ"}
       </S.MoreBtn>
-    </S.SurveyList>
+    </S.SurveyListContainer>
   );
 }
 

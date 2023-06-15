@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const SurveyList = styled.ul`
+export const SurveyListContainer = styled.ul`
   list-style: none;
+  padding: 0;
 `;
 
 export const MoreBtn = styled.button`
-  width: 150px;
   height: 40px;
   background: white;
   border: 2px dashed #dee3ec;
@@ -17,7 +17,7 @@ export const MoreBtn = styled.button`
   font-size: 18px;
 
   &:hover {
-    scale: 1.1;
+    scale: ${(props) => (props.hasnext == true ? 1.1 : 1)};
     transition: all 0.5s;
   }
 `;

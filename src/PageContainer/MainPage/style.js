@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
+// max-width: - 요소의 최대 너비를 제한하는 속성
+
 export const MainContainer = styled.div`
   width: 100%;
+  max-width: 865px;
   display: flex;
   gap: 50px;
-  justify-content: center;
+
+  margin: 80px auto;
 `;
 
 export const MainHeader = styled.header`
@@ -26,10 +30,12 @@ export const BoldText = styled.span`
   font-weight: 700;
 `;
 
-export const MainContent = styled.main``;
+export const MainContent = styled.main`
+  flex-grow: 1;
+`;
 
 export const ColorSurveyBtn = styled.button`
-  width: 520px;
+  width: 100%;
   height: 80px;
   border: 2px dashed #dee3ec;
   background: white;
