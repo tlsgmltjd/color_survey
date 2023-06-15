@@ -1,6 +1,7 @@
 import * as S from "./style";
 import * as C from "../../components";
 import { useState } from "react";
+import RandomImg from "../../images/repeat.svg";
 
 const SelectPage = () => {
   const optionGroups = [
@@ -46,7 +47,7 @@ const SelectPage = () => {
         <S.SelectColorHeader>
           <S.SelectColorTitle>컬러</S.SelectColorTitle>
           <S.SelectColorRandomBtn>
-            <S.SelectColorPreview />
+            <S.SelectColorRandomBtnImg src={RandomImg} />
           </S.SelectColorRandomBtn>
         </S.SelectColorHeader>
 

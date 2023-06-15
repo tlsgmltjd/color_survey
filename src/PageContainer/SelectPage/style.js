@@ -24,13 +24,38 @@ export const SectionTitle = styled.h2`
 
 export const SelectColorContainer = styled.section``;
 
-export const SelectColorHeader = styled.div``;
+export const SelectColorHeader = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-export const SelectColorTitle = styled.h2``;
+export const SelectColorTitle = styled.h2`
+  font-size: 28px;
+  font-weight: 500;
+  color: #464e5e;
+`;
 
-export const SelectColorRandomBtn = styled.button``;
+export const SelectColorRandomBtn = styled.button`
+  background: #f5f7fb;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
 
-export const SelectColorRandomBtnImg = styled.img``;
+  margin-left: 8px;
+
+  &:hover {
+    background: #edf0f5;
+  }
+
+  &:active {
+    background: #dee4ee;
+  }
+`;
+
+export const SelectColorRandomBtnImg = styled.img`
+  width: 12px;
+  height: 12px;
+`;
 
 export const SelectColorInputContainer = styled.div``;
 

@@ -20,7 +20,7 @@ export const MainHeader = styled.header`
   text-align: right;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   font-size: 40px;
   color: #464e5e;
