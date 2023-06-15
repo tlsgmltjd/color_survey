@@ -33,16 +33,28 @@ const SelectPage = () => {
   return (
     <S.SelectContainer>
       <C.SelectHeader />
-
       <S.SelectSection>
         <S.SectionTitle>MBTI</S.SectionTitle>
+        <C.SelectMbtiBox
+          mbti={mbti}
+          optionGroups={optionGroups}
+          updatedMbti={updatedMbti}
+        />
       </S.SelectSection>
 
-      <C.SelectMbtiBox
-        mbti={mbti}
-        optionGroups={optionGroups}
-        updatedMbti={updatedMbti}
-      />
+      <S.SelectColorContainer>
+        <S.SelectColorHeader>
+          <S.SelectColorTitle>컬러</S.SelectColorTitle>
+          <S.SelectColorRandomBtn>
+            <S.SelectColorPreview />
+          </S.SelectColorRandomBtn>
+        </S.SelectColorHeader>
+
+        <S.SelectColorInputContainer>
+          <S.SelectColorInput />
+          <S.SelectColorPreview />
+        </S.SelectColorInputContainer>
+      </S.SelectColorContainer>
     </S.SelectContainer>
   );
 };
