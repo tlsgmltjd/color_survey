@@ -39,13 +39,16 @@ function SurveyList({ data, setData, selectdFilter, setSelectdFilter }) {
           setSelectdFilter={setSelectdFilter}
         ></C.SurveyItem>
       ))}
-      <S.MoreBtn
-        hasnext={hasNext}
-        disabled={!hasNext}
-        onClick={handleMoreDataClick}
-      >
-        {hasNext ? "더보기" : "더 없어요 ㅠ"}
-      </S.MoreBtn>
+      {!selectdFilter ? (
+        // Filter가 적용되었다면 더보기 버튼이 보이지 않게 조건부 렌더링!
+        <S.MoreBtn
+          hasnext={hasNext}
+          disabled={!hasNext}
+          onClick={handleMoreDataClick}
+        >
+          {hasNext ? "더보기" : "더 없어요 ㅠ"}
+        </S.MoreBtn>
+      ) : null}
     </S.SurveyListContainer>
   );
 }
