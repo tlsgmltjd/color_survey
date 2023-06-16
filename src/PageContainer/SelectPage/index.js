@@ -26,7 +26,7 @@ const SelectPage = () => {
 
   const [mbti, setMbti] = useState(["E", "S", "T", "J"]);
 
-  const [value, onChange] = useInput("#000000");
+  const [value, onChange, setItem] = useInput("#000000");
 
   const updatedMbti = (index, pos, item) => {
     const updatedMbti = [...mbti];
@@ -34,6 +34,17 @@ const SelectPage = () => {
     setMbti(updatedMbti);
   };
 
+  const handleRandomColor = () => {
+    const hexDigits = "0123456789ABCDEF";
+    let randomCode = "";
+    for (let i = 0; i < 6; i++) {
+      randomCode =
+        randomCode + hexDigits[Math.floor(Math.random() * hexDigits.length)];
+    }
+    setItem("#" + randomCode);
+  };
+
+  // 우리는 이제 이렇게 부르기로 했어요
   // SelectHeader
   // SelectMbtiBox
   // SelectColor
@@ -53,7 +64,7 @@ const SelectPage = () => {
       <S.SelectColorContainer>
         <S.SelectColorHeader>
           <S.SelectColorTitle>컬러</S.SelectColorTitle>
-          <S.SelectColorRandomBtn>
+          <S.SelectColorRandomBtn onClick={handleRandomColor}>
             <S.SelectColorRandomBtnImg src={RandomImg} />
           </S.SelectColorRandomBtn>
         </S.SelectColorHeader>
