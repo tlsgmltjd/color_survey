@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const SelectColorContainer = styled.section``;
+export const SelectColorContainer = styled.section`
+  margin-bottom: 35px;
+`;
 
 export const SelectColorHeader = styled.div`
   display: flex;

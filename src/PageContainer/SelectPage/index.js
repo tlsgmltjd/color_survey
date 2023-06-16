@@ -47,6 +47,7 @@ const SelectPage = () => {
         updatedMbti={updatedMbti}
       />
       <C.SelectColor value={value} onChange={onChange} setItem={setItem} />
+      <S.SelectColorSubmitBtn>컬러 등록</S.SelectColorSubmitBtn>
     </S.SelectContainer>
   );
 };
