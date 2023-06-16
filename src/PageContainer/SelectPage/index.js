@@ -33,7 +33,7 @@ const SelectPage = () => {
     setMbti(updatedMbti);
   };
 
-  // 우리는 이제 이렇게 부르기로 했어요
+  // 이제 이렇게 부르기로 했어요
   // SelectHeader
   // SelectMbtiBox
   // SelectColor
