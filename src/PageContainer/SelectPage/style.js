@@ -57,8 +57,37 @@ export const SelectColorRandomBtnImg = styled.img`
   height: 12px;
 `;
 
-export const SelectColorInputContainer = styled.div``;
+export const SelectColorInputContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: Center;
+`;
 
-export const SelectColorInput = styled.input``;
+export const SelectColorInput = styled.input`
+  width: 100%;
+  border: 2px solid #e7ebf2;
+  color: #8892a6;
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 26px;
+  outline: none;
 
-export const SelectColorPreview = styled.span``;
+  &:hover {
+    background-color: #f5f7fb;
+  }
+
+  &:focus {
+    border: 2px solid #464e5e;
+    background-color: #ffffff;
+  }
+`;
+
+export const SelectColorPreview = styled.span`
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  border-radius: 9px;
+  background-color: ${(props) => props.value};
+`;

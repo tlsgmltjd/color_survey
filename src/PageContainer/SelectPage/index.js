@@ -2,6 +2,7 @@ import * as S from "./style";
 import * as C from "../../components";
 import { useState } from "react";
 import RandomImg from "../../images/repeat.svg";
+import { useInput } from "../../hooks/useInput";
 
 const SelectPage = () => {
   const optionGroups = [
@@ -24,6 +25,8 @@ const SelectPage = () => {
   ];
 
   const [mbti, setMbti] = useState(["E", "S", "T", "J"]);
+
+  const [value, onChange] = useInput("#000000");
 
   const updatedMbti = (index, pos, item) => {
     const updatedMbti = [...mbti];
@@ -56,10 +59,17 @@ const SelectPage = () => {
         </S.SelectColorHeader>
 
         <S.SelectColorInputContainer>
-          <S.SelectColorInput />
-          <S.SelectColorPreview />
+          <S.SelectColorPreview value={value} />
+          <S.SelectColorInput value={value} onChange={onChange} maxLength={7} />
         </S.SelectColorInputContainer>
       </S.SelectColorContainer>
+      <button
+        onClick={() => {
+          alert(value);
+        }}
+      >
+        등록
+      </button>
     </S.SelectContainer>
   );
 };
