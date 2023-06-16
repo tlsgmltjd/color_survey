@@ -4,7 +4,7 @@
 
 <br />
 
-**💻개발중** - **[접속링크]("shs-mbti-color-surveys.netlify.app")**
+**💻개발중** - **[접속링크]("https://shs-mbti-color-surveys.netlify.app/")**
 
 <br />
 
