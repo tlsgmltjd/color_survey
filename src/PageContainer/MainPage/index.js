@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import * as S from "./style";
 import * as C from "../../components";
+import { useState } from "react";
 
-const MainPage = () => {
+const MainPage = ({ data, setData }) => {
   return (
     <>
       <S.MainContainer>
@@ -15,7 +16,7 @@ const MainPage = () => {
               <S.ColorSurveyBtnText>+ 새 컬러 등록하기</S.ColorSurveyBtnText>
             </S.ColorSurveyBtn>
           </Link>
-          <C.SurveyList></C.SurveyList>
+          <C.SurveyList data={data} setData={setData} />
         </S.MainContent>
       </S.MainContainer>
     </>

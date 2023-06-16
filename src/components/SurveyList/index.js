@@ -3,9 +3,8 @@ import { getData } from "../../Request/Request";
 import * as S from "./style";
 import * as C from "../../components";
 
-function SurveyList() {
-  const [dataCount, setDataCount] = useState(0);
-  const [data, setData] = useState([]);
+function SurveyList({ data, setData }) {
+  // const [dataCount, setDataCount] = useState(0);
   const [offset, setOffset] = useState(0);
   const [hasNext, setHasNext] = useState(true);
 
@@ -13,7 +12,7 @@ function SurveyList() {
 
   async function doFetch() {
     const currentData = await getData(offset, LIMIT);
-    setDataCount(currentData.data.count);
+    // setDataCount(currentData.data.count);
 
     if (offset === 0) setData(currentData.data.results);
     else setData((prevItems) => [...prevItems, ...currentData.data.results]);

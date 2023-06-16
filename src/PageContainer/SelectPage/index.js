@@ -3,7 +3,7 @@ import * as C from "../../components";
 import { useState } from "react";
 import { useInput } from "../../hooks/useInput";
 
-const SelectPage = () => {
+const SelectPage = ({ data, setData }) => {
   const optionGroups = [
     [
       { value: "E", label: "외향형" },
@@ -48,7 +48,12 @@ const SelectPage = () => {
         updatedMbti={updatedMbti}
       />
       <C.SelectColor value={value} onChange={onChange} setItem={setItem} />
-      <C.SelectColotSubmitBtn mbti={mbti} colorCode={value} />
+      <C.SelectColotSubmitBtn
+        mbti={mbti}
+        colorCode={value}
+        data={data}
+        setData={setData}
+      />
     </S.SelectContainer>
   );
 };

@@ -35,7 +35,7 @@ export async function getData(offset, limit) {
 }
 
 export async function PostData(fullMbti, colorCode) {
-  axios
+  return axios
     .post(`${BASE_URL}color-surveys`, {
       mbti: fullMbti,
       colorCode: colorCode,
@@ -43,6 +43,7 @@ export async function PostData(fullMbti, colorCode) {
     })
     .then(function (response) {
       console.log(response);
+      return response;
     })
     .catch(function (error) {
       console.log(error);
