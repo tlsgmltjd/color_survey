@@ -13,3 +13,20 @@ export async function getData(offset, limit) {
     return false;
   }
 }
+
+export async function PostData(mbti, colorCode) {
+  axios
+    .post(`${BASE_URL}color-surveys`, {
+      mati: mati,
+      colorCode: colorCode,
+      password: "0301",
+    })
+    .then(function (response) {
+      console.log(response);
+      return response;
+    })
+    .catch(function (error) {
+      console.log(error);
+      return null;
+    });
+}
