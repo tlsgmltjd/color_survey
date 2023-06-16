@@ -1,9 +1,13 @@
 import * as S from "./style";
 import ArrowImg from "../../images/arrow.svg";
 
-const SurveyItem = ({ item }) => {
+const SurveyItem = ({ item, selectdFilter, setSelectdFilter }) => {
   return (
-    <S.SurveyList>
+    <S.SurveyList
+      onClick={() => {
+        setSelectdFilter(item.mbti);
+      }}
+    >
       <S.ItemContainer>
         <S.ItemID>{item.id}</S.ItemID>
         <S.ItemMbti>{item.mbti}</S.ItemMbti>

@@ -5,6 +5,9 @@ import { useState } from "react";
 
 function App() {
   const [data, setData] = useState([]);
+  const [selectdFilter, setSelectdFilter] = useState();
+
+  // 할일 : 전역상태관리하기 - props 드릴링이 시작되었다.. data, selectdFilter state 관리하기
 
   return (
     <div className="App">
@@ -12,7 +15,14 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<P.MainPage data={data} setData={setData} />}
+            element={
+              <P.MainPage
+                selectdFilter={selectdFilter}
+                setSelectdFilter={setSelectdFilter}
+                data={data}
+                setData={setData}
+              />
+            }
           />
           <Route
             path="/select"

@@ -3,7 +3,7 @@ import { getData } from "../../Request/Request";
 import * as S from "./style";
 import * as C from "../../components";
 
-function SurveyList({ data, setData }) {
+function SurveyList({ data, setData, selectdFilter, setSelectdFilter }) {
   // const [dataCount, setDataCount] = useState(0);
   const [offset, setOffset] = useState(0);
   const [hasNext, setHasNext] = useState(true);
@@ -32,7 +32,12 @@ function SurveyList({ data, setData }) {
   return (
     <S.SurveyListContainer>
       {data.map((item) => (
-        <C.SurveyItem key={item.id} item={item}></C.SurveyItem>
+        <C.SurveyItem
+          key={item.id}
+          item={item}
+          selectdFilter={selectdFilter}
+          setSelectdFilter={setSelectdFilter}
+        ></C.SurveyItem>
       ))}
       <S.MoreBtn
         hasnext={hasNext}

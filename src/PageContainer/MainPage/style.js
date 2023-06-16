@@ -62,6 +62,7 @@ export const ColorFilterBox = styled.div`
   justify-content: space-between;
   padding: 8px 24px;
   font-size: 25px;
+  font-weight: 600;
   cursor: pointer;
   width: 100px;
   border-radius: 9px;
