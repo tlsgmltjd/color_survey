@@ -48,7 +48,7 @@ const SelectPage = () => {
         updatedMbti={updatedMbti}
       />
       <C.SelectColor value={value} onChange={onChange} setItem={setItem} />
-      <C.SelectColotSubmitBtn value={value} />
+      <C.SelectColotSubmitBtn mbti={mbti} colorCode={value} />
     </S.SelectContainer>
   );
 };

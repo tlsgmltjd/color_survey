@@ -17,6 +17,8 @@ export async function getData(offset, limit) {
 */
 
 export async function getData(offset, limit) {
+  // 중요 !!!!!!
+
   // then(()=>{}) 안에서의 return은 getData 함수 자체의 반환값이 아니라
   // then 콜백 함수 내부의 반환값이기 때문에 getData 함수는 항상 undefined를 return한다.
   // 그래서 axios 앞에 return을 붙혀야한다.
@@ -32,19 +34,17 @@ export async function getData(offset, limit) {
     });
 }
 
-export async function PostData(mbti, colorCode) {
+export async function PostData(fullMbti, colorCode) {
   axios
     .post(`${BASE_URL}color-surveys`, {
-      mbti: mbti,
+      mbti: fullMbti,
       colorCode: colorCode,
       password: "0301",
     })
     .then(function (response) {
       console.log(response);
-      return response;
     })
     .catch(function (error) {
       console.log(error);
-      return null;
     });
 }
