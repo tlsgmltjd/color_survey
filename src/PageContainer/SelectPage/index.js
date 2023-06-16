@@ -37,6 +37,7 @@ const SelectPage = () => {
   // SelectHeader
   // SelectMbtiBox
   // SelectColor
+  // SelectColotSubmitBtn
 
   return (
     <S.SelectContainer>
@@ -47,7 +48,7 @@ const SelectPage = () => {
         updatedMbti={updatedMbti}
       />
       <C.SelectColor value={value} onChange={onChange} setItem={setItem} />
-      <S.SelectColorSubmitBtn>컬러 등록</S.SelectColorSubmitBtn>
+      <C.SelectColotSubmitBtn value={value} />
     </S.SelectContainer>
   );
 };
