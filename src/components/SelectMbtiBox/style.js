@@ -38,3 +38,20 @@ export const SelectBtnBoldText = styled.span`
   color: ${(props) =>
     props.selected == props.currentMbti ? "white" : "#464e5e"};
 `;
+
+export const SelectSection = styled.section`
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+`;
+
+export const SectionTitle = styled.h2`
+  display: flex;
+  justify-content: left;
+  font-size: 25px;
+  font-weight: 500;
+  color: #464e5e;
+`;

@@ -41,14 +41,11 @@ const SelectPage = () => {
   return (
     <S.SelectContainer>
       <C.SelectHeader />
-      <S.SelectSection>
-        <S.SectionTitle>MBTI</S.SectionTitle>
-        <C.SelectMbtiBox
-          mbti={mbti}
-          optionGroups={optionGroups}
-          updatedMbti={updatedMbti}
-        />
-      </S.SelectSection>
+      <C.SelectMbtiBox
+        mbti={mbti}
+        optionGroups={optionGroups}
+        updatedMbti={updatedMbti}
+      />
       <C.SelectColor value={value} onChange={onChange} setItem={setItem} />
     </S.SelectContainer>
   );
