@@ -6,15 +6,17 @@ export const SurveyListContainer = styled.ul`
 `;
 
 export const MoreBtn = styled.button`
-  height: 40px;
+  height: 45px;
   background: white;
   border: 2px dashed #dee3ec;
   border-radius: 9px;
+  margin: 25px 0;
+  padding: 5px 15px;
   transition: all 0.5s;
   color: #464e5e;
 
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 20px;
 
   &:hover {
     scale: ${(props) => (props.hasnext == true ? 1.1 : 1)};
