@@ -12,17 +12,18 @@ export const MainContainer = styled.div`
 `;
 
 export const MainHeader = styled.header`
-  width: 400px;
-  height: 300px;
+  padding: 80px 40px;
+  position: sticky;
+  top: 80px;
   background: #f5f7fb;
   border-radius: 50px;
   font-weight: 300;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   font-size: 40px;
   color: #464e5e;
+  height: 160px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const BoldText = styled.span`
@@ -53,3 +54,19 @@ export const ColorSurveyBtnText = styled.div`
   padding: 22px;
   color: #464e5e;
 `;
+
+export const ColorFilterBox = styled.div`
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+  font-size: 25px;
+  cursor: pointer;
+  width: 100px;
+  border-radius: 9px;
+  align-self: end;
+  margin-top: 25px;
+`;
+
+export const ColorFilterBoxImg = styled.img``;

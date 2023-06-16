@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import * as S from "./style";
 import * as C from "../../components";
+import XBtn from "../../images/x.svg";
 import { useState } from "react";
 
 const MainPage = ({ data, setData }) => {
@@ -8,7 +9,13 @@ const MainPage = ({ data, setData }) => {
     <>
       <S.MainContainer>
         <S.MainHeader>
-          MBTI별<S.BoldText>좋아하는 컬러</S.BoldText>
+          MBTI별
+          <br />
+          <S.BoldText>좋아하는 컬러</S.BoldText>
+          <S.ColorFilterBox>
+            ENFP
+            <S.ColorFilterBoxImg src={XBtn} />
+          </S.ColorFilterBox>
         </S.MainHeader>
         <S.MainContent>
           <Link to="select">
