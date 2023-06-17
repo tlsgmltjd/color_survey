@@ -38,12 +38,19 @@ export const MainHeader = styled.header`
     justify-content: center;
     align-items: center;
     top: 30px;
-    padding: 25px 45px;
+    padding: 35px 45px;
   }
 `;
 
 export const BoldText = styled.span`
   font-weight: 700;
+`;
+
+export const Description = styled.p`
+  font-weight: 300;
+  font-size: 12px;
+  margin: 5px 0 0 0;
+  justify-self: center;
 `;
 
 export const MainContent = styled.main`
@@ -92,7 +99,12 @@ export const ColorFilterBox = styled.div`
   width: 100px;
   border-radius: 9px;
   align-self: end;
-  margin-top: 25px;
+  margin-top: 20px;
+
+  @media screen and (max-width: 944px) {
+    margin: 20px auto;
+    padding: 6px 20px;
+  }
 `;
 
 export const ColorFilterBoxImg = styled.img``;

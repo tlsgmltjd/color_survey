@@ -18,6 +18,7 @@ const MainPage = ({ data, setData, selectdFilter, setSelectdFilter }) => {
           MBTI별
           <br />
           <S.BoldText>좋아하는 컬러</S.BoldText>
+          <S.Description>Made by. 신희성</S.Description>
           {selectdFilter ? (
             <S.ColorFilterBox onClick={handleFilterDelete}>
               {selectdFilter}
