@@ -4,7 +4,9 @@
 
 <br />
 
-**💻개발중** ➡ **[접속링크](https://shs-mbti-color-surveys.netlify.app/)**
+**💻** ➡ **[접속링크](https://shs-mbti-color-surveys.netlify.app/)**
+
+> 할 일 : 전역상태관리하기 + 컴포넌트로 빼서 정리하기
 
 ---
 
