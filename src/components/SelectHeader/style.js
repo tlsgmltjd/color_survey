@@ -11,6 +11,10 @@ export const HeaderTitle = styled.h1`
   font-weight: 800;
   font-size: 40px;
   color: #464e5e;
+
+  @media screen and (max-width: 944px) {
+    font-size: 30px;
+  }
 `;
 
 export const ExitBtnBox = styled.button`

@@ -13,6 +13,10 @@ export const SelectColorTitle = styled.h2`
   font-size: 28px;
   font-weight: 500;
   color: #464e5e;
+
+  @media screen and (max-width: 944px) {
+    font-size: 25px;
+  }
 `;
 
 export const SelectColorRandomBtn = styled.button`

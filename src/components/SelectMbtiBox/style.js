@@ -30,6 +30,10 @@ export const SelectBtn = styled.div`
     background: ${(props) =>
       props.selected == props.currentMbti ? "#464E5E" : "#f5f7fb"};
   }
+
+  @media screen and (max-width: 944px) {
+    font-size: 20px;
+  }
 `;
 
 export const SelectBtnBoldText = styled.span`
@@ -37,6 +41,10 @@ export const SelectBtnBoldText = styled.span`
   font-weight: 600;
   color: ${(props) =>
     props.selected == props.currentMbti ? "white" : "#464e5e"};
+
+  @media screen and (max-width: 944px) {
+    font-size: 28px;
+  }
 `;
 
 export const SelectSection = styled.section`
