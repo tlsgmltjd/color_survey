@@ -3,8 +3,9 @@ import styled from "styled-components";
 // max-width: - 요소의 최대 너비를 제한하는 속성
 
 export const MainContainer = styled.div`
+  position: relative;
   width: 100%;
-  max-width: 965px;
+  max-width: 980px;
   display: flex;
   gap: 50px;
 
@@ -12,7 +13,7 @@ export const MainContainer = styled.div`
 `;
 
 export const MainHeader = styled.header`
-  padding: 80px 40px;
+  padding: 80px 45px;
   position: sticky;
   top: 80px;
   background: #f5f7fb;
@@ -20,10 +21,11 @@ export const MainHeader = styled.header`
   font-weight: 300;
   font-size: 40px;
   color: #464e5e;
-  height: 160px;
   text-align: right;
   display: flex;
   flex-direction: column;
+  height: 150px;
+  flex-grow: 0;
 `;
 
 export const BoldText = styled.span`

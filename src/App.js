@@ -16,6 +16,8 @@ function App() {
   // filtered 된 데이터 저장, 그리고 List로 출력될 때 filter가 선택되었다면
   // sortedData를 출력시키게 함
 
+  // 이런 망할 API 요청에 쿼리로 mbti를 보내면 자동으로 정렬해서 준답니다..
+
   // 할일 : 전역상태관리하기 - props 드릴링이 시작되었다.. data, selectdFilter state 관리하기
 
   useEffect(() => {
