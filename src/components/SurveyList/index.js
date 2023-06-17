@@ -3,13 +3,7 @@ import { getData } from "../../Request/Request";
 import * as S from "./style";
 import * as C from "../../components";
 
-function SurveyList({
-  data,
-  setData,
-  selectdFilter,
-  setSelectdFilter,
-  sortedData,
-}) {
+function SurveyList({ data, setData, selectdFilter, setSelectdFilter }) {
   // const [dataCount, setDataCount] = useState(0);
   const [offset, setOffset] = useState(0);
   const [hasNext, setHasNext] = useState(true);
@@ -17,7 +11,11 @@ function SurveyList({
   const LIMIT = 20;
 
   async function doFetch() {
-    const currentData = await getData(offset, LIMIT);
+    const currentData = await getData(
+      offset,
+      LIMIT,
+      selectdFilter ? selectdFilter : null
+    );
     // setDataCount(currentData.data.count);
 
     if (offset === 0) setData(currentData.data.results);
@@ -29,7 +27,7 @@ function SurveyList({
 
   useEffect(() => {
     doFetch();
-  }, [offset]);
+  }, [offset, selectdFilter]);
 
   const handleMoreDataClick = () => {
     setOffset(offset + LIMIT);
@@ -37,30 +35,15 @@ function SurveyList({
 
   return (
     <S.SurveyListContainer>
-      {!selectdFilter ? (
-        <>
-          {data.map((item) => (
-            <C.SurveyItem
-              key={item.id}
-              item={item}
-              setSelectdFilter={setSelectdFilter}
-            ></C.SurveyItem>
-          ))}
-        </>
-      ) : (
-        <>
-          {sortedData.map((item) => (
-            <C.SurveyItem
-              key={item.id}
-              item={item}
-              selectdFilter={selectdFilter}
-              setSelectdFilter={setSelectdFilter}
-            ></C.SurveyItem>
-          ))}
-        </>
-      )}
-      {!selectdFilter && hasNext ? (
-        // Filter가 적용되었다면 더보기 버튼이 보이지 않게 조건부 렌더링
+      {data.map((item) => (
+        <C.SurveyItem
+          key={item.id}
+          item={item}
+          selectdFilter={selectdFilter}
+          setSelectdFilter={setSelectdFilter}
+        ></C.SurveyItem>
+      ))}
+      {hasNext && (
         <S.MoreBtn
           hasnext={hasNext}
           disabled={!hasNext}
@@ -68,7 +51,7 @@ function SurveyList({
         >
           🔽
         </S.MoreBtn>
-      ) : null}
+      )}
     </S.SurveyListContainer>
   );
 }
