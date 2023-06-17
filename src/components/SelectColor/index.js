@@ -12,6 +12,14 @@ const SelectColor = ({ value, onChange, setItem }) => {
     setItem("#" + randomCode);
   };
 
+  // 잘못된 색상 코드를 입력했을 때, 인풋이 blur되면 #000000 으로 바뀐다.
+  const handleBlur = () => {
+    const regex = /^#[0-9A-Fa-f]{6}$/i;
+    if (!regex.test(value)) {
+      setItem("#000000");
+    }
+  };
+
   return (
     <S.SelectColorContainer>
       <S.SelectColorHeader>
@@ -23,7 +31,12 @@ const SelectColor = ({ value, onChange, setItem }) => {
 
       <S.SelectColorInputContainer>
         <S.SelectColorPreview value={value} />
-        <S.SelectColorInput value={value} onChange={onChange} maxLength={7} />
+        <S.SelectColorInput
+          onBlur={handleBlur}
+          value={value}
+          onChange={onChange}
+          maxLength={7}
+        />
       </S.SelectColorInputContainer>
     </S.SelectColorContainer>
   );
