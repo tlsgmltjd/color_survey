@@ -1,7 +1,7 @@
 import * as S from "./style";
 import ArrowImg from "../../images/arrow.svg";
 
-const SurveyItem = ({ item, selectdFilter, setSelectdFilter }) => {
+const SurveyItem = ({ item, setSelectdFilter }) => {
   return (
     <S.SurveyList
       onClick={() => {

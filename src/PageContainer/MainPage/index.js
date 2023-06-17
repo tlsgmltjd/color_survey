@@ -4,7 +4,13 @@ import * as C from "../../components";
 import XBtn from "../../images/x.svg";
 import { useState } from "react";
 
-const MainPage = ({ data, setData, selectdFilter, setSelectdFilter }) => {
+const MainPage = ({
+  data,
+  setData,
+  selectdFilter,
+  setSelectdFilter,
+  sortedData,
+}) => {
   // 할일 : ColorFilterBox 컴포넌트로 빼기
 
   const handleFilterDelete = () => {
@@ -36,6 +42,7 @@ const MainPage = ({ data, setData, selectdFilter, setSelectdFilter }) => {
             setSelectdFilter={setSelectdFilter}
             data={data}
             setData={setData}
+            sortedData={sortedData}
           />
         </S.MainContent>
       </S.MainContainer>

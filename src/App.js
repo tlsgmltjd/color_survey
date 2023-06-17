@@ -6,6 +6,7 @@ import { getData } from "./Request/Request";
 
 function App() {
   const [data, setData] = useState([]);
+  const [sortedData, setSortedData] = useState([]);
   const [selectdFilter, setSelectdFilter] = useState();
 
   // 더 빨리 할 일 : FilterBox의 X를 눌렀을 때 data들이 다시 돌아오게 해야함
@@ -19,7 +20,7 @@ function App() {
       const sortedData = copyData.filter((item) => {
         return item.mbti === selectdFilter;
       });
-      setData(sortedData);
+      setSortedData(sortedData);
     } else {
       //
     }
@@ -37,6 +38,7 @@ function App() {
                 setSelectdFilter={setSelectdFilter}
                 data={data}
                 setData={setData}
+                sortedData={sortedData}
               />
             }
           />
