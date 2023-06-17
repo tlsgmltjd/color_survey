@@ -5,6 +5,6 @@ export const SelectContainer = styled.div`
   margin: 80px auto;
 
   @media screen and (max-width: 944px) {
-    width: 100%;
+    width: 95%;
   }
 `;

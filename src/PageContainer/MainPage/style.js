@@ -7,11 +7,12 @@ export const MainContainer = styled.div`
   width: 100%;
   max-width: 980px;
   display: flex;
-  gap: 50px;
+  gap: 40px;
 
   margin: 80px auto;
 
   @media screen and (max-width: 944px) {
+    width: 95%;
     margin: 30px auto;
     flex-direction: column;
     gap: 25px;
@@ -19,7 +20,7 @@ export const MainContainer = styled.div`
 `;
 
 export const MainHeader = styled.header`
-  padding: 80px 45px;
+  padding: 70px 45px;
   position: sticky;
   top: 80px;
   background: #f5f7fb;
