@@ -10,6 +10,12 @@ export const MainContainer = styled.div`
   gap: 50px;
 
   margin: 80px auto;
+
+  @media screen and (max-width: 944px) {
+    margin: 30px auto;
+    flex-direction: column;
+    gap: 25px;
+  }
 `;
 
 export const MainHeader = styled.header`
@@ -26,6 +32,13 @@ export const MainHeader = styled.header`
   flex-direction: column;
   height: 150px;
   flex-grow: 0;
+
+  @media screen and (max-width: 944px) {
+    justify-content: center;
+    align-items: center;
+    top: 30px;
+    padding: 25px 45px;
+  }
 `;
 
 export const BoldText = styled.span`
@@ -47,6 +60,11 @@ export const ColorSurveyBtn = styled.button`
   &:hover {
     background-color: #f5f7fb;
   }
+
+  @media screen and (max-width: 944px) {
+    font-size: 18px;
+    height: 70px;
+  }
 `;
 
 export const ColorSurveyBtnText = styled.div`
@@ -55,6 +73,10 @@ export const ColorSurveyBtnText = styled.div`
   text-align: left;
   padding: 22px;
   color: #464e5e;
+
+  @media screen and (max-width: 944px) {
+    font-size: 18px;
+  }
 `;
 
 export const ColorFilterBox = styled.div`

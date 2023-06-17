@@ -22,6 +22,10 @@ export const SurveyList = styled.li`
     background: #edf0f5;
     transition: all 0.1s;
   }
+
+  @media screen and (max-width: 944px) {
+    padding: 0 30px;
+  }
 `;
 
 export const ItemContainer = styled.div`
@@ -30,6 +34,10 @@ export const ItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 944px) {
+    width: 100%;
+  }
 `;
 
 export const ItemID = styled.div`
@@ -37,6 +45,11 @@ export const ItemID = styled.div`
   font-size: 25px;
 
   flex-shrink: 0;
+
+  @media screen and (max-width: 944px) {
+    font-size: 20px;
+    margin-right: 5px;
+  }
 `;
 
 export const ItemMbti = styled.div`
@@ -51,6 +64,12 @@ export const ItemMbti = styled.div`
   padding: 8px;
 
   flex-shrink: 0;
+
+  @media screen and (max-width: 944px) {
+    font-size: 20px;
+    padding: 4px;
+    width: 66px;
+  }
 `;
 
 export const ItemColorBox = styled.div`
@@ -63,6 +82,11 @@ export const ItemColorBox = styled.div`
   border-radius: 9px;
 
   flex-shrink: 0;
+
+  @media screen and (max-width: 944px) {
+    width: 30px;
+    height: 30px;
+  }
 `;
 
 export const ItemColorCode = styled.div`
@@ -70,6 +94,10 @@ export const ItemColorCode = styled.div`
   font-size: 25px;
 
   flex-shrink: 0;
+
+  @media screen and (max-width: 944px) {
+    font-size: 15px;
+  }
 `;
 
 export const ItemArrowContainer = styled.div`
