@@ -20,6 +20,14 @@ function App() {
 
   // 할일 : 전역상태관리하기 - props 드릴링이 시작되었다.. data, selectdFilter state 관리하기
 
+  /*********************/
+  // 정적 파일 호스팅 서비스에서 배포시 새로고침 Not Found Error
+  // public/_redirects
+  // -> /* /index.html 200
+
+  // 어떠한 경로로 들어와도 ( /* ), 200 상태코드를 내려주며, index.html 파일을 렌더링 하겠다는 의미이다.
+  /*********************/
+
   return (
     <div className="App">
       <BrowserRouter>
