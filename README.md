@@ -2,8 +2,7 @@
 
 **MBTI별 설문 조사 목록을 통해서 사람들이 작성한 컬러를 확인할 수 있고, 새로운 컬러를 등록할 수도 있는 웹 사이트**
 
-<br />
-**[바로가기](https://shs-mbti-color-surveys.netlify.app/)**
+https://shs-mbti-color-surveys.netlify.app
 
 ---
 
